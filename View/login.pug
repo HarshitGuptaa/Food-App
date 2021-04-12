@@ -1,0 +1,77 @@
+extends base.pug
+
+append links 
+ link(rel='stylesheet' href='./css/login.css')
+
+block header
+ include homepageheader.pug
+
+block content
+ .form
+  .form-toggle
+  .form-panel.one
+    .form-header
+      h1 Account Login
+    .form-content
+      form
+        .form-group
+          label(for='username') Login Id
+          input(type='text' id='username' name='username' required)
+        .form-group
+          label(for='password') Password
+          input(type='password'
+                id='password'
+                name='password'
+                required)
+        .form-group
+          label.form-remember
+            input(type='checkbox')
+            | Remember Me
+          a.forgetPassword.form-recovery(href='#') Forgot Password?
+        span.message
+        .form-group
+          button(type='submit' id='submit') Log In
+  .form-panel.two
+    .form-header
+      h1 Register Account
+    .form-content
+      form
+        .form-group
+          label(for='name') Username
+          input(type='text'
+                id='name'
+                name='name'
+                required)
+        .form-group
+          label(for='signupPw') Password
+          input(type='password'
+                id='signupPw'
+                name='signupPw'
+                required)
+        .form-group
+          label(for='cpassword') Confirm Password
+          input(type='password'
+                id='cpassword'
+                name='cpassword'
+                required)
+        .form-group
+          label(for='email') Email Address
+          input(type='email'
+                id='email'
+                name='email'
+                required)
+        span.message
+        .form-group
+          button(type='submit' id="signupbtn") Register
+//-  .pen-footer
+//-   a(href='https://www.behance.net/gallery/30478397/Login-Form-UI-Library'
+//-     target='_blank')
+//-     i.material-icons arrow_backward
+//-     | View on Behance
+//-   a(href='https://github.com/andyhqtran/UI-Library/tree/master/Login%20Form'
+//-     target='_blank')
+//-     | View on Github
+//-     i.material-icons arrow_forward
+
+block scripts
+ script(src="./js/login.js")

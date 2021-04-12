@@ -1,0 +1,50 @@
+extends base.pug  
+
+append links
+  link(rel='stylesheet' href='./css/profile.css')
+    
+
+block content
+
+    .container
+
+
+        .image
+            
+            img(src=user.pImage)
+            
+            .change-img
+                label(for="profileImage") Change Image
+                input(type="file" name="user" id="profileImage")
+            
+  
+        .info
+            form
+                .form-group
+                    label(for='name') Name
+                    input(type='text' id='name' name='name' value = user.name disabled)
+
+                .form-group
+                    label(for='email') E-Mail
+                    input(type='email' id='email' name='email' value = user.email disabled)
+                .form-group
+                    label(for='password') Password
+                    input(type='password' id='password' name='password' value = user.password disabled)
+                .form-group
+                    label(for='cpw') Confirm Password
+                    input(type='password' id='cpw' name='cpw' value = user.password disabled)
+                .form-group
+                    label(for='role') Role
+                    input(type='text' id='role' name='role' value = user.role disabled)
+
+            .btns
+
+                .edit-btn  Edit
+                
+
+                .save-btn  Save 
+
+
+
+block scripts
+ script(src="./js/profile.js")

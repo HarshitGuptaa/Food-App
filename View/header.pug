@@ -1,0 +1,21 @@
+.navigation.fixed
+  .home
+    a(href='/') <i class="fas fa-home"></i> 
+  ul.nav
+    li.nav-line
+      a.aTag(href='/') FEATURES
+    li.nav-line
+      a.aTag(href='/details') DETAILS
+    li.nav-line
+      a.aTag(href='/reviews') REVIEWS
+    li.nav-line
+      a.aTag(href='/plans') PLANS
+    
+    if name
+     li.nav-line 
+      a.aTag(href='/profile') #{name} 
+     li.nav-line
+      a.aTag(href='/logout') LOGOUT        
+    else
+     li.nav-line
+      a.aTag(href='/login') LOGIN

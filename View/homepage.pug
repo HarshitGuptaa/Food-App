@@ -1,0 +1,137 @@
+extends base.pug
+
+block header
+ .showcase
+  include homepageheader.pug
+  .showcase-content
+    h1 MEAL PLANS.
+    h1
+        | FOR 
+        span#changing-text
+    .showcase-buttons
+        .btn Book Now
+        .btn-fade Show Me More
+
+block content
+ .features.page
+  .heading
+    h2 AWESOME FEATURES
+  .content
+    .box
+      i.fas.fa-shipping-fast.icon
+      h3 365 DAYS/YEAR
+      p
+        | Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can
+        | also choose to order more flexibly if that&apos;s your style.
+    .box
+      i.fas.fa-shipping-fast.icon
+      h3 30 MINUTES OR FREE
+      p
+        | You&apos;re only twenty minutes away from your delicious and super healthy meals delivered right to your home. We
+        | work with the best chefs in each town to ensure that you&apos;re 100% happy.
+    .box
+      i.fas.fa-carrot.icon
+      h3 100% ORGANIC
+      p
+        | All our vegetables are fresh, organic and local. Animals are raised without added
+        | hormones or antibiotics. Good for your health, the environment, and it also tastes better!
+
+ .follow.page
+  .heading
+    h2 STEPS TO FOLLOW
+  .follow-container
+    img.iphone-img(src='./img/Capture.PNG' alt='iphone-img' srcset='')
+    .steps-container
+      .step
+        .step-val 1
+        p.step-para Choose the subscription plan that best fits your needs and sign up today.
+      .step
+        .step-val 2
+        p.step-para
+          | Order your delicious meal using our mobile app or website. Or you can even call us!
+      .step
+        .step-val 3
+        p.step-para Enjoy your meal after less than 20 minutes. See you the next time!
+
+ .review.page
+  .heading
+    h2(style='color: white;') REVIEWS
+  .content
+    .box-fade
+      // <i class="fas fa-shipping-fast icon"></i>
+      h3 Tony Stark
+      p
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere pariatur in hic aut iusto sequi laborum delectus dolorum exercitationem quidem numquam blanditiis doloribus repellat, impedit accusamus. Hic, dolorem! Atque, optio.
+      .stars
+        i.fas.fa-star.small-icon
+        i.fas.fa-star.small-icon
+        i.fas.fa-star.small-icon
+        i.fas.fa-star.small-icon
+        i.fas.fa-star.small-icon
+    .box-fade
+      // <i class="fas fa-shipping-fast icon"></i>
+      h3 Black Widow
+      p
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere pariatur in hic aut iusto sequi laborum delectus dolorum exercitationem quidem numquam blanditiis doloribus repellat, impedit accusamus. Hic, dolorem! Atque, optio.
+      .stars
+        i.fas.fa-star.small-icon
+        i.fas.fa-star.small-icon
+        i.fas.fa-star.small-icon
+        i.fas.fa-star.small-icon
+        i.fas.fa-star.small-icon
+    .box-fade
+      // <i class="fas fa-shipping-fast icon"></i>
+      h3 Steve Rogers
+      p
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere pariatur in hic aut iusto sequi laborum delectus dolorum exercitationem quidem numquam blanditiis doloribus repellat, impedit accusamus. Hic, dolorem! Atque, optio.
+      .stars
+        i.fas.fa-star.small-icon
+        i.fas.fa-star.small-icon
+        i.fas.fa-star.small-icon
+        i.fas.fa-star.small-icon
+        i.fas.fa-star.small-icon
+
+ .signup
+  .heading
+   h2 START EATING HEALTHY TODAY
+  .signup-parent
+   each plan in plans
+    include planCard.pug
+
+ .contact
+  .heading
+    h2 CONTACT US
+  .container__parent
+    video.bg-video__content(autoplay='' muted='' loop='')
+      source(src='./img/Avocado.mp4' type='video/mp4')
+      source(src='./img/Avocado.webm' type='video/webm')
+      |         Your browser is not supported
+    form
+      .entry
+        .entry-text Name
+        input(type='text' name='Name' placeholder='Your Name' required='')
+      .entry
+        .entry-text Email
+        input(type='email' name='email' placeholder='Your Email')
+      .entry
+        .entry-text How did you find us
+        select(name='' id='')
+          option(value='') friends
+          option(value='') search
+          option(value='') advertsiment
+          option(value='') other
+      .entry
+        .entry-text
+          | Drop us a line
+        textarea(name='' id='' placeholder='Your Message')
+      .entry.check
+        input.checkbox(type='checkbox' name='email')
+        span.checkbox-conditions
+          | I have read and agree with all the Privacy Policy and
+          | Terms Conditions
+      .btn-parent
+        a.btn.form-button(href='#') SEND MESSAGE
+
+append scripts
+ script(src="https://js.stripe.com/v3/")
+ script(src="./js/buyPlan.js")

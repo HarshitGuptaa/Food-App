@@ -1,0 +1,12 @@
+extends base.pug
+
+block content
+ .signup
+  .heading
+   h2 PLANS
+  .signup-parent
+   each plan in plans
+    include planCard.pug
+block scripts
+ script(src="https://js.stripe.com/v3/")
+ script(src="./js/buyPlan.js")

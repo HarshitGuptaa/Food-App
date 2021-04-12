@@ -1,0 +1,497 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lato', sans-serif;
+    color: gray;
+   
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+.showcase{
+    background-image:linear-gradient(rgba(8, 8, 8, 0.596) , rgb(0,0,0,1)), url("../img/foodiesfeed.com_pizza-ready-for-baking.jpg");
+    height: 100vh;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 10px;
+}
+
+.nav-line{
+    transition: transform 0.2s;
+}
+
+.nav-line:hover{
+    transform: scale(1.2);
+}
+
+.aTag{
+    color: white;
+    margin:  20px;
+    text-decoration: none;
+    font-size: 19px;
+    transition: transform 0.3s;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.aTag:hover{
+    transform: scale(1.2);
+    border-bottom: 1px solid #F63854;
+}
+
+
+.fixed{
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
+    position: fixed;
+    z-index: 2;
+}
+
+.fixed a{
+    color: #F63854;
+}
+
+.home{
+  position: absolute;
+  font-size: x-large;
+  left: 30px;
+  top: 5px;
+  color: #F63854;
+  transition: transform 0.3s;
+}
+
+.home:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.showcase-content{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+.showcase-content h1{
+    color: white;
+    font-size: 400%;
+
+}
+
+#changing-text{
+    color: #F63854;
+}
+
+.showcase-buttons{
+    margin-top: 30px;
+    display: flex;
+    width: 300px;
+    height: 50px;
+    /* background: mediumblue; */
+    justify-content: space-evenly;
+}
+.btn{
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F63854;
+    color: white;
+    height: 60px;
+    border-radius: 30px;
+    padding: 0px 30px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform 0.3s; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F63854;
+    color: white;
+    height: 60px;
+    border-radius: 30px;
+    padding: 0px 10px;
+    /* margin-right: 20px; */
+    cursor: pointer;
+    transition: transform 0.3s;
+
+}
+
+.btn-fade{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid #F63854;
+    color: #F63854;
+    height: 60px;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.btn-fade:hover{
+    transform: scale(1.2);
+    background: #F63854;
+    color:white;
+    
+}
+
+.btn:hover{
+    transform: scale(1.2);
+}
+
+.showcase-buttons .btn{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F63854;
+    color: white;
+    height: 60px;
+    border-radius: 30px;
+    padding: 0px 30px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+}
+
+h2{
+    font-size: 225%;
+    text-align: center;
+}
+
+h2::after{
+    content: "";
+    color: #F63854;
+    display: block;
+    width: 15%;
+    border-bottom: 5px solid #F63854;
+    margin: 15px auto;
+}
+
+.review h2::after{
+    content: "";
+    color: #F63854;
+    display: block;
+    width: 8%;
+    border-bottom: 5px solid #F63854;
+    margin: 15px auto;
+}
+
+.page{
+}
+
+.features{
+    height: 100vh;
+    margin: 0px 74px;
+}
+
+.follow{
+    height: 100vh;
+    background-color: rgb(244, 244, 244);
+}
+
+.follow-container{
+ display: flex;
+ justify-content: space-evenly;
+}
+
+.iphone-img{
+    width: 15%;
+}
+
+.steps-container{
+    padding: 23px 20px;
+    margin-top: 11px;
+}
+
+.step{
+    display: flex;
+    height: 30%;
+    position: relative;
+}
+
+.step-val{
+    color: #F63854;
+    border: 3px solid #F63854;
+    border-radius: 50%;
+    height: 55%;
+    width: 11%;
+    text-align: center;
+    font-size: 150%;
+    padding-top: 13px;
+    font-weight: 600;
+}
+.step-para{
+    padding-left: 18px;
+    padding-top: 11px;
+}
+
+
+.review{
+    height: 100vh;
+    background-image:linear-gradient(rgba(8, 8, 8, 0.596) , rgb(0,0,0,1)), url(../img/foodiesfeed.com_pizza-ready-for-baking.jpg);
+    background-attachment: fixed;
+    background-size: 100vw;
+}
+
+.stars{
+    text-align: center;
+    margin-top: 24px;
+}
+
+.heading{
+    padding-top: 40px;
+}
+
+.content{
+    display: flex;
+    height: 51%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 100px 0px;
+}
+
+.box{
+    width: 29%;
+    height: 84%;
+    box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
+    padding: 25px;
+    transition: transform 0.2s;
+
+}
+
+.box:hover{
+    transform: scale(1.1);
+}
+
+.box-fade{
+    width: 29%;
+    height: 84%;
+    background-color: white;
+    box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
+    padding: 25px;
+    transition: transform 0.2s;
+}
+.box-fade:hover{
+    transform: scale(1.1);
+}
+.icon{
+    color: #F63854;
+    margin-left: 42%;
+    font-size: 300%;
+}
+
+h3{
+    font-size: 125%;
+    text-align: center;
+    margin: 10px 0px;
+    margin-bottom: 20px;
+}
+
+p{ 
+    line-height: 145%;
+}
+
+.signup {
+    background-color: #f4f4f4;
+    height: 110vh;
+  }
+  .signup-parent {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 31px;
+  }
+  
+  .signup-child {
+    border-width: 1px;
+    border-color: rgb(134, 143, 161);
+    border-style: solid;
+    border-radius: 4%;
+    width: 25%;
+    /* margin-bottom: 4%; */
+    font-size: 120%;
+  }
+  .signup-features ul {
+    text-align: left;
+    /* font-size: 123%; */
+    line-height: 200%;
+    border-bottom: 1px solid rgb(134, 143, 161);
+    margin: 1rem;
+    list-style-type: none;
+  }
+  
+  .signup-header {
+    padding: 3%;
+    border-bottom: 1px solid rgb(134, 143, 161);
+    line-height: 265%;
+    margin: 1rem;
+  }
+  .signup-button {
+    text-align: center;
+    position: relative;
+    top: 1.5rem;
+    /* left: 5rem; */
+    display: inline-block;
+    color: white;
+    /* margin-right: 1rem; */
+    padding: 0.8rem -0.4rem;
+    background-color: #f63854;
+    border-radius: 4rem;
+    border: 0.1rem solid #f63854;
+    transition: transform 0.3s, color 0.3s, background-color 0.3s;
+    margin: 0px 107px;
+  }
+
+  .pricing {
+    font-size: 300%;
+    color: #f63854;
+  }
+  /* .features { */
+  /* scale: transform(2); */
+  /* } */
+  
+  .signup-child {
+    transform: scale(0.8);
+  }
+
+  .active {
+    box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
+    transform: scale(0.95);
+  }
+  
+  .small-icon{
+    color: #f63854;
+    margin-right: 1rem;
+  }
+
+
+  .contact{
+    background-color:  #212529;
+    height: 135vh;
+  }
+
+  .contact h2{
+      color: white;
+  }
+
+  .container__parent{
+    height: 81%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .bg-video__content{
+    width: 40%;
+    position: relative;
+    height: 75%;
+  }
+
+form{
+    width: 44%;
+    padding-top: 14px;
+}
+
+  .entry{
+    margin-bottom: 3%;
+    border-radius: 10px;
+  }
+
+  .entry-text{
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 110%;
+  }
+
+  input, select, textarea{
+    background-color: rgb(241, 237, 237);
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    width: 95%;
+    padding: 3%;
+    margin-bottom: 3%;
+  }
+
+  textarea {
+    height: 7rem;
+  }
+
+  .check{
+      display: flex;
+  }
+
+  .checkbox{
+    width: 44px;
+    margin-top: 3px;
+  }
+
+  .checkbox-conditions{
+
+  }
+
+  .btn-parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-buttom{
+    height: 45px;
+  }
+
+  .footer {
+    background-color: rgb(58, 56, 56);
+    height: 11rem;
+  }
+  .social-link {
+    display: flex;
+    width: 40%;
+    list-style-type: none;
+  }
+  .text-value {
+    padding-right: 6%;
+  }
+  .footer-text {
+    display: flex;
+    width: 70%;
+    padding-right: 6%;
+    list-style-type: none;
+  }
+  .footer-parent {
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 2%; */
+    padding-top: 3%;
+    padding-left: 4%;
+  }
+  .text-value a,
+  .icon-footer {
+    font-size: 160%;
+    color: white;
+  }
+  .social-link li {
+    padding-right: 10%;
+  }
+  .footer-p {
+    text-align: center;
+    margin-top: 2%;
+    font-size: 140%;
+  }
+  
+
